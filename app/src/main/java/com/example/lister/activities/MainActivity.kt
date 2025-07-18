@@ -1,7 +1,13 @@
 package com.example.lister.activities
 
+import android.app.Activity
+import android.content.Intent
+import android.nfc.Tag
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -9,9 +15,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lister.R
 import com.example.lister.adapters.CountryListAdapter
+import com.example.lister.adapters.CountryListClickListener
 import com.example.lister.model.Country
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), CountryListClickListener {
+
+    val TAG = "MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -48,25 +57,25 @@ class MainActivity : AppCompatActivity() {
             Country("Bangladesh", "BA", 2352874),
             Country("Nepal", "NP", 34333333)
         )
-        recyclerView.adapter = CountryListAdapter(countryList)
+        recyclerView.adapter = CountryListAdapter(countryList, this)
 
     }
 
-//    override fun onCountryClick(country: Country) {
-//        // Move to country detail view with info from selection
-//        val intent = Intent(this, CountryDetailActivity::class.java)
-//        intent.putExtra("EXTRA_COUNTRY", country)
-//        resultLauncher.launch(intent)
-//    }
-//
-//    // country detail activity launcher to handle results
-//    var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-//            result ->
-//        if (result.resultCode == Activity.RESULT_OK){
-//            //There's a valid result
-//            Log.d(TAG, "Country Marked!")
-//            val toast = Toast.makeText(this, getString(R.string.country_marked), Toast.LENGTH_SHORT)
-//            toast.show()
-//        }
-//    }
+    override fun onCountryClick(country: Country) {
+        // Move to country detail view with info from selection
+        val intent = Intent(this, CountryDetailActivity::class.java)
+        intent.putExtra("EXTRA_COUNTRY", country)
+        resultLauncher.launch(intent)
+    }
+
+    // country detail activity launcher to handle results
+    var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
+            result ->
+        if (result.resultCode == Activity.RESULT_OK){
+            // There's a valid result
+            Log.d(TAG, "Country Marked!")
+            val toast = Toast.makeText(this, getString(R.string.country_marked), Toast.LENGTH_SHORT)
+            toast.show()
+        }
+    }
 }

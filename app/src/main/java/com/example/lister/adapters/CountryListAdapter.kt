@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lister.R
 import com.example.lister.model.Country
 
-class CountryListAdapter(private val mList: List<Country>) : RecyclerView.Adapter<CountryListAdapter.ViewHolder>(){
+class CountryListAdapter(private val mList: List<Country>, private val mListener: CountryListClickListener) : RecyclerView.Adapter<CountryListAdapter.ViewHolder>(){
     // Holds the view for an item
     class  ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         // Get references to elements in our list item
@@ -30,10 +30,10 @@ class CountryListAdapter(private val mList: List<Country>) : RecyclerView.Adapte
         holder.titleTextView.text = country.name
         holder.codeTextView.text = country.code
         holder.populationTextView.text = country.population.toString()
-//        holder.itemView.setOnClickListener(View.OnClickListener {
-//            val country = mList[position]
-//            mListener.onCountryClick(country)
-//        })
+        holder.itemView.setOnClickListener(View.OnClickListener {
+            val country = mList[position]
+            mListener.onCountryClick(country)
+        })
     }
 
     override fun getItemCount(): Int {

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ListerApp</string>
+    <string name="countries">Countries</string>
+    <string name="country_name">Country Name:</string>
+    <string name="country_code">Country Code:</string>
+    <string name="country_population">Country Population:</string>
+    <string name="country_languages">Country Languages:</string>
+    <string name="country_description">Country Description:</string>
+    <string name="country_mark">Mark</string>
+    <string name="country_marked">Country Marked Successfully!</string>
 </resources>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CountryDetailActivity">
+
+    <TextView
+        android:id="@+id/title_label_textview"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/entry_height"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="@dimen/app_vertical_margin"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:gravity="center_vertical"
+        android:text="@string/country_name"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_value_text_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/entry_height"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:text="Sri Lanka"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_label_textview" />
+
+    <TextView
+        android:id="@+id/code_label_textview"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/entry_height"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="@dimen/app_vertical_margin"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:gravity="center_vertical"
+        android:text="@string/country_code"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_value_text_view" />
+
+    <TextView
+        android:id="@+id/code_value_text_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/entry_height"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:gravity="center_vertical"
+        android:text="LK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code_label_textview" />
+
+    <TextView
+        android:id="@+id/population_label_textview"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/entry_height"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="@dimen/app_vertical_margin"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:gravity="center_vertical"
+        android:text="@string/country_population"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code_value_text_view" />
+
+    <TextView
+        android:id="@+id/population_value_text_view"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/entry_height"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:gravity="center_vertical"
+        android:text="22,500,000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/population_label_textview" />
+
+    <TextView
+        android:id="@+id/languages_label_textview"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/entry_height"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="@dimen/app_vertical_margin"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:gravity="center_vertical"
+        android:text="@string/country_languages"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/population_value_text_view" />
+
+    <TextView
+        android:id="@+id/languages_value_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:text="English\nSinhala\nTamil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/languages_label_textview" />
+
+    <TextView
+        android:id="@+id/desc_label_textview"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/entry_height"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="@dimen/app_vertical_margin"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:gravity="center_vertical"
+        android:text="@string/country_description"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/languages_value_text_view" />
+
+    <TextView
+        android:id="@+id/desc_value_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:gravity="center_vertical"
+        android:text="Sri Lanka is a beautiful island in Indian Ocean with diverse cultures and beautiful tourist attractions."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_label_textview" />
+
+    <Button
+        android:id="@+id/mark_button"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="@dimen/app_horizontal_margin"
+        android:layout_marginTop="@dimen/button_vertical_margin"
+        android:layout_marginEnd="@dimen/app_horizontal_margin"
+        android:text="@string/country_mark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc_value_text_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>

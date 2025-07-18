@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Lister-sovellus</string>
+    <string name="countries">Maat</string>
+    <string name="country_name">Maan Nimi:</string>
+    <string name="country_code">Maakoodi:</string>
+    <string name="country_population">Maan väestö:</string>
+    <string name="country_languages">Maan kielet:</string>
+    <string name="country_description">Maan kuvaus:</string>
+    <string name="country_mark">Mark</string>
+    <string name="country_marked">Maa merkitty onnistuneesti!</string>
 </resources>
