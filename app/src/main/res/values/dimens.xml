@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_horizontal_margin">16dp</dimen>
+    <dimen name="app_vertical_margin">8dp</dimen>
+    <dimen name="primary_text_size">14sp</dimen>
+    <dimen name="list_item_height">48dp</dimen>
+</resources>
