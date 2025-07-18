@@ -2,6 +2,12 @@
 <resources>
     <dimen name="app_horizontal_margin">16dp</dimen>
     <dimen name="app_vertical_margin">8dp</dimen>
+    <dimen name="text_margin">4dp</dimen>
+    <dimen name="list_item_padding">8dp</dimen>
     <dimen name="primary_text_size">14sp</dimen>
-    <dimen name="list_item_height">48dp</dimen>
+    <dimen name="list_item_height">96dp</dimen>
+    <dimen name="list_row_height">48dp</dimen>
+    <dimen name="entry_height">32dp</dimen>
+    <dimen name="button_vertical_margin">24dp</dimen>
+    <dimen name="button_height">56dp</dimen>
 </resources>

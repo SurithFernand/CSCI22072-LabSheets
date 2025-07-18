@@ -10,7 +10,14 @@
     <style name="TextViewStyle">
         <item name="android:textColor">@color/primaryTextColor</item>
         <item name="android:textSize">@dimen/primary_text_size</item>
-        <item name="android:layout_marginStart">@dimen/app_horizontal_margin</item>
-        <item name="android:layout_marginEnd">@dimen/app_horizontal_margin</item>
+        <item name="android:layout_marginStart">@dimen/text_margin</item>
+        <item name="android:layout_marginEnd">@dimen/text_margin</item>
     </style>
+
+    <style name="ListItemStyle">
+        <item name="android:paddingStart">@dimen/list_item_padding</item>
+        <item name="android:paddingEnd">@dimen/list_item_padding</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
 </resources>
